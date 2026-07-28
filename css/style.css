@@ -3,22 +3,57 @@
    El estudiante DEBE usar estas variables.
    ========================================= */
 :root {
-    /* Paleta de Colores */
-    --color-bg-primary: #0f172a;    /* Fondo principal oscuro */
-    --color-bg-secondary: #1e293b;  /* Fondo de tarjetas */
-    --color-accent: #3b82f6;        /* Azul brillante para acciones */
-    --color-accent-hover: #2563eb;
-    --color-text-main: #f8fafc;     /* Blanco casi puro */
-    --color-text-muted: #94a3b8;    /* Gris para textos secundarios */
-    
+
+    /* Paleta principal */
+
+    --color-bg-primary:#090A18;
+    --color-bg-secondary:#151A2F;
+    --color-bg-light:#F8FAFC;
+    --color-bg-footer:#120A24;
+
+    /* Colores de acento */
+
+    --color-accent:#8B5CF6;
+    --color-accent-hover:#A855F7;
+    --color-accent-secondary:#5B8CFF;
+
+    /* Texto */
+
+    --color-text-main:#eae7e7;
+    --color-text-dark:#111827;
+    --color-text-muted:#94A3B8;
+
+    /* Bordes */
+
+    --color-border:#E5E7EB;
+
     /* Tipografía */
-    --font-main: 'Inter', sans-serif;
-    
-    /* Espaciado */
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-    --container-width: 1200px;
+
+    --font-main:'Inter',sans-serif;
+
+    /* Espaciados */
+
+    --spacing-sm:.5rem;
+    --spacing-md:1rem;
+    --spacing-lg:2rem;
+    --spacing-xl:5rem;
+
+    /* Contenedor */
+
+    --container-width:1200px;
+
+    /* Bordes */
+
+    --radius:18px;
+
+    /* Sombras */
+
+    --shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+    --shadow-hover:
+    0 20px 45px rgba(139,92,246,.25);
+
 }
 
 /* =========================================
@@ -29,12 +64,18 @@
     padding: 0;
     box-sizing: border-box; /* Vital para el cálculo de anchos */
 }
+html{
+
+    scroll-behavior:smooth;
+
+}
 
 body {
     font-family: var(--font-main);
     background-color: var(--color-bg-primary);
     color: var(--color-text-main);
     line-height: 1.6;
+    overflow-x:hidden;
 }
 
 a {
@@ -52,7 +93,13 @@ img {
     display: block;
     height: auto;
 }
-
+.hero{
+    background:linear-gradient(
+        180deg,
+        var(--color-bg-primary),
+        var(--color-bg-secondary)
+    );
+}
 /* =========================================
    3. UTILIDADES
    ========================================= */
@@ -61,7 +108,11 @@ img {
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
+.section{
 
+    padding:var(--spacing-xl) 0;
+
+}
 /* NOTA:
    - Usa 'layout.css' para grillas (Grid/Flex) de las secciones.
    - Usa 'components.css' para botones, tarjetas y formularios.
