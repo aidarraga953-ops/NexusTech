@@ -1,0 +1,158 @@
+/*==============================
+    HERO
+==============================*/
+
+.reviews-hero{
+    padding: 8rem 0 3rem;
+}
+
+.reviews-hero h1{
+    margin-bottom: 1rem;
+}
+
+.reviews-hero p{
+    max-width: 650px;
+}
+
+
+/*==============================
+    RESEÑAS
+==============================*/
+
+.featured-reviews{
+    padding: 2rem 0 4rem;
+}
+
+.section-title{
+    margin-bottom: 2rem;
+}
+
+.section-title h2{
+    margin-bottom: .5rem;
+}
+
+.reviews-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.review-stars{
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #430064;
+}
+
+/*==============================
+    TABLA
+==============================*/
+
+.comparison{
+    padding: 4rem 0;
+}
+
+.table-container{
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+th,
+td{
+    padding: 1rem;
+    text-align: left;
+}
+
+thead{
+    background: var(--color-bg-secondary);
+}
+
+tbody tr{
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+tbody tr:hover{
+    background: rgba(255,255,255,.04);
+}
+
+/*==============================
+    COMENTARIOS
+==============================*/
+
+.comments{
+    padding: 4rem 0;
+}
+
+.comments-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment-form input,
+.comment-form textarea{
+
+    padding: 1rem;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: inherit;
+}
+
+.comments-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.comment{
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.comment h4{
+    margin-bottom: .5rem;
+}
+
+.comment span{
+    color: #facc15;
+}
+
+/*==============================
+    RESPONSIVE
+==============================*/
+
+@media (max-width: 992px){
+
+    .reviews-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .comments-layout{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .reviews-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
