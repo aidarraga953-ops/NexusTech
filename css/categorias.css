@@ -1,0 +1,186 @@
+/*==================================
+            PAGINA
+==================================*/
+
+.categories-page{
+    padding: 7rem 0 3rem;
+}
+
+/*==================================
+            HEADER
+==================================*/
+
+.page-header{
+    margin-bottom: 3rem;
+}
+
+.page-header h1{
+    margin-bottom: .75rem;
+}
+
+.page-header p{
+    max-width: 650px;
+}
+
+/*==================================
+        LAYOUT PRINCIPAL
+==================================*/
+
+.categories-layout{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/*==================================
+            SIDEBAR
+==================================*/
+
+.filters{
+    width: 240px;
+    flex-shrink: 0;
+
+    position: sticky;
+    top: 110px;
+
+    padding:2rem;
+    border-radius:20px;
+
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.filter-group{
+    margin-bottom: 2rem;
+}
+
+.filter-group:last-child{
+    margin-bottom: 0;
+}
+
+.filter-group h3{
+    margin-bottom: 1rem;
+}
+
+.filter-list{
+    list-style: none;
+}
+
+.filter-list li{
+    margin-bottom: .8rem;
+}
+
+.filter-option{
+    cursor: pointer;
+}
+
+/*==================================
+            ARTICULOS
+==================================*/
+
+.articles{
+    flex: 1;
+}
+
+.articles-header{
+    margin-bottom: 2rem;
+}
+
+.articles-header h2{
+    margin-bottom: .5rem;
+}
+/*==================================
+                CARD
+==================================*/
+
+.card{
+    
+    height: 640px;
+    
+}
+
+.card__image{
+    width:100%;
+    height: 180px;
+    object-fit:cover;
+}
+
+.card__info{
+    display:flex;
+    gap:.5rem;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.card__content{
+    padding:1.3rem;
+} 
+
+
+
+/*==================================
+            PAGINACIÓN
+==================================*/
+
+.pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+
+    margin-top:3rem;
+}
+
+.pagination a{
+    text-decoration:none;
+    padding:.75rem 1rem;
+    border-radius:10px;
+}
+
+.pagination .active{
+    font-weight:bold;
+}
+
+/*==================================
+            GRID
+==================================*/
+
+.articles-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+/*==================================
+             RESPONSIVE
+==================================*/
+
+
+/*====TABLET====*/
+
+@media(max-width:1024px){
+
+    .articles-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/*====MOVIL====*/
+
+@media(max-width:768px){
+
+    .categories-layout{
+        flex-direction:column;
+    }
+
+    .filters{
+        width:100%;
+        position:static;
+    }
+
+    .articles-grid{
+        grid-template-columns:1fr;
+    }
+
+}
