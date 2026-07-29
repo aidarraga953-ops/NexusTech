@@ -2,25 +2,6 @@
             HEADER
 ==================================*/
 
-.main-header{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    z-index:1000;
-
-    background:rgba(9,10,24,.65);
-
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-}
 
 .logo a{
 
@@ -146,7 +127,7 @@
 
 .hero p{
 
-    color:var(--color-text-muted);
+    color:var(--color-accent);
 
     font-size:1.1rem;
 
@@ -225,13 +206,13 @@
 
 .card__description{
 
-    color: var(--color-text-muted);
+    color: var(--color-text-dark);
 
 }
 
 .card__info{
 
-    color:#64748B;
+    color:#c9804d;
 
 }
 
