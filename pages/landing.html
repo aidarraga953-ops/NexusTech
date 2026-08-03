@@ -4,67 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TechBlog - Las últimas tendencias en tecnología, desarrollo y gadgets.">
-    <title>Reseñas | Inicio</title>
+    <title>TechBlog | Inicio</title>
     
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/landing.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header class="main-header">
         <div class="container">
             <div class="logo">
                 <a href="#" class="logo">
-                    <img src="../assets/img/logo.png" alt="Nexus Tech">
+                    <img src="/assets/img/logo.png" alt="Nexus Tech">
                 </a>
                 <span class="nexus">NEXUS</span>
                 <span class="tech">TECH</span>
             </div>
-            
+
             <nav class="main-nav">
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="hamburguesa">
                     ☰
                 </label>
                 <ul>
-                    <li><a href="/index.html" >Inicio</a></li>
-
-                    <li><a href="/pages/landing.html">Servicio</a></li>
-
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/landing.html" class="active">Servicio</a></li>
                     <li><a href="/pages/categorias.html">Categorías</a></li>
                     <li><a href="/pages/resenas.html">Reseñas</a></li>
                     <li><a href="/pages/comunidad.html">Comunidad</a></li>
                     <li><a href="/pages/eventos.html">Eventos</a></li>
-
-                    <li><a href="pages/contacto.html" class="active" class="btn-nav">Contacto</a></li>
-
-                    <li><a href="/pages/contacto.html" class="active" class="btn-nav">Contacto</a></li>
-
+                    <li><a href="/pages/contacto.html" class="btn-nav">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-         <section class="contact-hero">
+        <section class="contact-hero">
             <div class="container">
 
-                <span class="section-tag">Centro de Contacto</span>
+                <span class="section-tag">Centro de suscripciones</span>
 
-                <h1>Estamos listos para escucharte</h1>
+                <h1>Estamos listos para ofrecerte un plan que se adapte a ti</h1>
 
                 <p>
-                    ¿Tienes una duda, una sugerencia o quieres colaborar con Nexus Tech?
+                    ¿Tienes una duda, una sugerencia de como funcionan las suscripciones con Nexus Tech?
                     Completa el formulario y nuestro equipo se pondrá en contacto contigo.
                 </p>
 
             </div>
         </section>
-         <section class="contact-section">
+        <section class="contact-section">
             <div class="container contact-grid">
 
                 <!-- FORMULARIO -->
@@ -89,11 +84,47 @@
 
                         <div class="form-group">
 
+                            <label for="tel">Telefono</label>
+
+                            <input
+                                type="tel"
+                                id="tel"
+                                placeholder="+57 300 000 0000"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
                             <label for="email">Correo electrónico</label>
 
                             <input
                                 type="email"
                                 id="email"
+                                placeholder="correo@ejemplo.com"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">Cuenta Bancaria</label>
+
+                            <input
+                                type="banco"
+                                id="banco"
+                                placeholder="0400  0000 00000 000"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="suscripcion">Tipo de suscripción</label>
+
+                            <input
+                                type="suscripcion"
+                                id="suscripcion"
                                 placeholder="correo@ejemplo.com"
                                 required>
 
@@ -110,66 +141,16 @@
                                 required></textarea>
 
                         </div>
-
+                        <div class="autorizacion">
+                            <label for="autorizar" class="autorizar-option"><input type="checkbox" id="autorizar"> Acepta los terminos y condiciones del servicio ofrecido.</label>
+                        </div>
                         <button type="submit" class="btn-primary">
-                            Enviar
+                            Suscribirse
                         </button>
 
                     </form>
 
                 </div>
-
-                <!-- MAPA -->
-
-                <div class="contact-map">
-
-                    <h2>Ubicación</h2>
-
-                    <img
-                        src="../assets/img/gps.png"
-                        alt="Mapa de ubicación">
-
-                </div>
-
-            </div>
-        </section>
-         <section class="social-section">
-            <div class="container">
-
-                <div class="section-title">
-
-                    <h2>Síguenos</h2>
-
-                    <p>
-                        Mantente informado sobre las últimas novedades tecnológicas.
-                    </p>
-
-                </div>
-
-                <div class="social-grid">
-
-                    <a href="#" class="social-card">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <span>Facebook</span>
-                    </a>
-
-                    <a href="#" class="social-card">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-
-                    <a href="#" class="social-card">
-                        <i class="fa-brands fa-x-twitter"></i>
-                        <span>X</span>
-                    </a>
-
-                    <a href="#" class="social-card">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        <span>LinkedIn</span>
-                    </a>
-
-                </div>
-
             </div>
         </section>
     </main>
@@ -179,13 +160,13 @@
 
             <div class="footer-col">
 
-                <div class="footer-brand">
-                    <a href="#" class="logo-footer">
-                        <img src="../assets/img/logo.png" alt="Nexus Tech">
-                    </a>
-                    <span class="nexus">NEXUS</span>
-                    <span class="tech">TECH</span>
-                </div>
+            <div class="footer-brand">
+                <a href="#" class="logo-footer">
+                    <img src="/assets/img/logo.png" alt="Nexus Tech">
+                </a>
+                <span class="nexus">NEXUS</span>
+                <span class="tech">TECH</span>
+            </div>
 
                 <p>
                     Exploramos las ideas, tecnologías y personas que
@@ -266,3 +247,4 @@
 
     </footer>
 </body>
+</html>
