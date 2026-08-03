@@ -14,30 +14,17 @@
 .main-header .container{
     width: min(1700px,95%);
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    pointer-events: auto;
-}
-
-/* ===========================
-         LOGO
-=========================== */
-.main-header .container{
-    width:min(1700px,95%);
-    margin:0 auto;
-    height:88px;
+    height: 88px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:0 38px;
+    padding:0 28px;
 
     border-radius:32px;
 
     background:rgba(255,255,255,.08);
-
     border:1px solid rgba(255,255,255,.18);
 
     backdrop-filter:blur(28px);
@@ -50,11 +37,16 @@
     pointer-events:auto;
 }
 
+/* ===========================
+   LOGO
+=========================== */
+
 .logo{
     display:flex;
     align-items:center;
     gap:16px;
     text-decoration:none;
+    flex-shrink:0;
 }
 
 .logo img{
@@ -63,85 +55,142 @@
     display:block;
 }
 
-.logo .nexus{
+.logo .nexus,
+.logo .tech{
     font-family:"Space Grotesk",sans-serif;
     font-size:2rem;
     font-weight:700;
     letter-spacing:.12em;
-    color:#E0DDD7;
     text-transform:uppercase;
+    white-space:nowrap;
+}
+
+.logo .nexus{
+    color:#E0DDD7;
 }
 
 .logo .tech{
-    margin-left:-8px;
-
-    font-family:"Space Grotesk",sans-serif;
-    font-size:2rem;
-    font-weight:700;
-    letter-spacing:.12em;
     color:#C1A57A;
-    text-transform:uppercase;
+    margin-left:-8px;
 }
+
 /* ===========================
-   MENU NAVEGACIÓN
+   MENU
 =========================== */
 
 .main-nav{
-
     margin-left:auto;
-
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
 }
 
 .main-nav ul{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    list-style: none;
+    display:flex;
+    align-items:center;
+    gap:clamp(4px, 1vw, 14px);
+    list-style:none;
 }
 
 .main-nav a{
-    display: block;
-    padding: 14px 20px;
-    border-radius: 16px;
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: .35s;
+    display:block;
+    padding:14px clamp(12px, 1.4vw, 20px);
+    border-radius:16px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+    transition:.35s;
+    white-space:nowrap;
 }
 
 .main-nav a:hover{
-    background: rgba(255,255,255,.08);
+    background:rgba(255,255,255,.08);
 }
 
 .main-nav a.active{
-    background: rgba(255,255,255,.12);
+    background:rgba(255,255,255,.12);
 }
 
 .btn-nav{
-    background: rgba(255,255,255,.18) !important;
-    border: 1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.18)!important;
+    border:1px solid rgba(255,255,255,.18);
 }
 
 .main-nav ul li:nth-last-child(2){
-    position: relative;
-    margin-right: 14px;
+    position:relative;
+    margin-right:14px;
 }
 
 .main-nav ul li:nth-last-child(2)::after{
-    content: "";
-    position: absolute;
-    right: -14px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 20px;
-    background: rgba(255,255,255,.18);
+    content:"";
+    position:absolute;
+    right:-14px;
+    top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:20px;
+    background:rgba(255,255,255,.18);
 }
+
+/* ===========================
+   HAMBURGUESA
+=========================== */
 
 #menu-toggle{
     display:none;
 }
 
+.hamburguesa{
+    display:none;
+    color:#fff;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1200px){
+
+    .hamburguesa{
+        display:block;
+    }
+
+    .main-nav ul{
+        display:none;
+        position:absolute;
+        top:105px;
+        right:20px;
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+
+        width:260px;
+
+        padding:18px;
+
+        border-radius:20px;
+
+        background:rgba(30,30,30,.95);
+
+        backdrop-filter:blur(20px);
+    }
+
+    .main-nav ul li{
+        width:100%;
+    }
+
+    .main-nav ul a{
+        width:100%;
+    }
+
+    #menu-toggle:checked ~ ul{
+        display:flex;
+    }
+
+}
 /* ===========================
    HERO
 =========================== */
@@ -378,9 +427,3 @@
     letter-spacing:.45em;
     font-size:.85rem;
 }
-
-
-
-
-
-    
